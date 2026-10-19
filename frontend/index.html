@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MockMate AI interview practice platform">
+  <title>MockMate AI | Interview Practice</title>
+
+  <!-- Connect CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Connect JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" id="sidebar">
+
+      <a href="#dashboard" class="brand">
+        <span class="brand-icon">✦</span>
+        <span>
+          MockMate <span class="brand-ai">AI</span>
+          <small>Your interview companion</small>
+        </span>
+      </a>
+
+      <p class="menu-label">WORKSPACE</p>
+
+      <nav class="side-nav">
+        <a href="#dashboard" class="nav-link active" data-page="dashboard">
+          <span>⌂</span>
+          Dashboard
+        </a>
+
+        <a href="#practice" class="nav-link" data-page="practice">
+          <span>✧</span>
+          Practice Interview
+        </a>
+
+        <a href="#progress" class="nav-link" data-page="progress">
+          <span>◷</span>
+          My Progress
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-star">✦</span>
+          <h3>You've got this!</h3>
+          <p>
+            Every practice session brings you one step closer
+            to your dream job.
+          </p>
+        </div>
+
+        <p class="sidebar-footer">
+          Made for your next big opportunity ♡
+        </p>
+      </div>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content" id="dashboard">
+
+      <!-- TOP NAVIGATION -->
+      <header class="topbar">
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <div class="breadcrumb">
+          Workspace <span>/</span> Dashboard
+        </div>
+
+        <div class="profile">
+          <div class="profile-avatar">M</div>
+          <div>
+            <strong>My Workspace</strong>
+            <small>Interview Candidate</small>
+          </div>
+        </div>
+
+      </header>
+
+      <!-- ========== WELCOME SECTION ========== -->
+      <section class="welcome-section">
+
+        <div class="welcome-content">
+          <p class="eyebrow">YOUR PERSONAL INTERVIEW COACH</p>
+
+          <h1>
+            Let's make your next interview <span>count.</span>
+          </h1>
+
+          <p class="welcome-text">
+            A little practice today can make a big difference tomorrow.
+            Ready to build your confidence?
+          </p>
+        </div>
+
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-circle">✦</div>
+
+          <div class="art-card">
+            <span>✧</span>
+            <strong>You've got this!</strong>
+            <small>Believe in yourself</small>
+          </div>
+
+          <span class="art-spark spark-one">✧</span>
+          <span class="art-spark spark-two">✦</span>
+        </div>
+
+      </section>
+
+      <!-- ========== STATISTICS ========== -->
+      <section class="stats-grid" aria-label="Practice statistics">
+
+        <article class="stat-card">
+          <div class="stat-icon lilac">✧</div>
+          <div>
+            <p>Interviews Practiced</p>
+            <h2 id="interviewCount">0</h2>
+            <small>Keep up the practice!</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon pink">♡</div>
+          <div>
+            <p>Answers Submitted</p>
+            <h2 id="answerCount">0</h2>
+            <small>Every answer counts</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon peach">♧</div>
+          <div>
+            <p>Practice Streak</p>
+            <h2 id="streakCount">0 days</h2>
+            <small>Start your journey today</small>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ========== INTERVIEW CATEGORIES ========== -->
+      <section class="section-block" id="practice">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LET'S GET PRACTICING</p>
+            <h2>Choose your interview</h2>
+            <p>
+              Select a role and start practicing interview questions.
+            </p>
+          </div>
+
+          <span class="soft-badge">
+            5 practice paths · 40 questions
+          </span>
+        </div>
+
+        <div class="roles-grid">
+
+          <!-- CATEGORY 1: WEB DEVELOPER -->
+          <article class="role-card role-pink">
+
+            <div class="role-top">
+              <div class="role-icon">🌐</div>
+              <span class="role-tag">WEB DEVELOPMENT</span>
+            </div>
+
+            <h3>Web Developer</h3>
+
+            <p>
+              Practice HTML, CSS, JavaScript and essential web
+              development concepts.
+            </p>
+
+            <button
+              class="role-button"
+              data-role="Web Developer"
+              type="button"
+            >
+              Start Practice <span>→</span>
+            </button>
+
+          </article>
+
+          <!-- CATEGORY 2: PYTHON DEVELOPER -->
+          <article class="role-card role-blue">
+
+            <div class="role-top">
+              <div class="role-icon">🐍</div>
+              <span class="role-tag">PROGRAMMING</span>
+            </div>
+
+            <h3>Python Developer</h3>
+
+            <p>
+              Practice Python basics, functions, data structures
+              and programming concepts.
+            </p>
+
+            <button
+              class="role-button"
+              data-role="Python Developer"
+              type="button"
+            >
+              Start Practice <span>→</span>
+            </button>
+
+          </article>
+
+          <!-- CATEGORY 3: HR INTERVIEW -->
+          <article class="role-card role-peach">
+
+            <div class="role-top">
+              <div class="role-icon">💬</div>
+              <span class="role-tag">PERSONAL</span>
+            </div>
+
+            <h3>HR Interview</h3>
+
+            <p>
+              Improve your introduction, strengths, weaknesses
+              and situational answers.
+            </p>
+
+            <button
+              class="role-button"
+              data-role="HR Interview"
+              type="button"
+            >
+              Start Practice <span>→</span>
+            </button>
+
+          </article>
+
+          <!-- CATEGORY 4: CYBERSECURITY -->
+          <article class="role-card role-purple">
+
+            <div class="role-top">
+              <div class="role-icon">🛡️</div>
+              <span class="role-tag">SECURITY</span>
+            </div>
+
+            <h3>Cybersecurity Analyst</h3>
+
+            <p>
+              Practice security fundamentals, threats,
+              authentication and incident response.
+            </p>
+
+            <button
+              class="role-button"
+              data-role="Cybersecurity"
+              type="button"
+            >
+              Start Practice <span>→</span>
+            </button>
+
+          </article>
+
+          <!-- CATEGORY 5: DATA ANALYST -->
+          <article class="role-card role-blue">
+
+            <div class="role-top">
+              <div class="role-icon">📊</div>
+              <span class="role-tag">DATA ANALYTICS</span>
+            </div>
+
+            <h3>Data Analyst</h3>
+
+            <p>
+              Practice data analysis, SQL, Python, statistics
+              and data visualization.
+            </p>
+
+            <button
+              class="role-button"
+              data-role="Data Analyst"
+              type="button"
+            >
+              Start Practice <span>→</span>
+            </button>
+
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ========== INTERVIEW PANEL ========== -->
+      <section class="interview-panel hidden" id="interviewPanel">
+
+        <div class="interview-heading">
+          <div>
+            <p class="eyebrow">YOUR PRACTICE SESSION</p>
+            <h2 id="interviewTitle">Interview Practice</h2>
+          </div>
+
+          <button
+            class="text-button"
+            id="exitInterview"
+            type="button"
+          >
+            ← Back to dashboard
+          </button>
+        </div>
+
+        <!-- QUESTION PROGRESS -->
+        <div class="progress-row">
+          <span id="questionProgress">Question 1 of 8</span>
+
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- QUESTION -->
+        <div class="question-box">
+          <span class="question-mark">Q.</span>
+
+          <div>
+            <p class="eyebrow">YOUR INTERVIEW QUESTION</p>
+            <h3 id="questionText">
+              Your interview question will appear here.
+            </h3>
+          </div>
+        </div>
+
+        <!-- ANSWER INPUT -->
+        <label class="input-label" for="candidateAnswer">
+          Your answer
+        </label>
+
+       
+<div class="answer-input-wrapper">
+  <textarea
+    id="candidateAnswer"
+    rows="6"
+    placeholder="Type your answer or click the microphone to speak..."
+  ></textarea>
+
+  <button id="micButton" class="mic-button" type="button">
+    🎤 Speak Answer
+  </button>
+
+  <p id="micStatus" aria-live="polite">
+    Click the microphone to answer by voice.
+  </p>
+</div>
+
+
+        <p class="answer-tip">
+          Tip: Be clear, specific and use examples when possible.
+        </p>
+
+        <!-- ANSWER FEEDBACK -->
+        <div
+          class="feedback-box hidden"
+          id="feedbackBox"
+          aria-live="polite"
+        ></div>
+
+        <!-- INTERVIEW BUTTONS -->
+        <div class="interview-actions">
+
+          <button
+            class="secondary-button"
+            id="previousQuestion"
+            type="button"
+          >
+            Previous
+          </button>
+
+          <button
+            class="primary-button"
+            id="submitAnswer"
+            type="button"
+          >
+            Submit Answer →
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- ========== PROGRESS SECTION ========== -->
+      <section class="section-block progress-section" id="progress">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR GROWTH JOURNEY</p>
+            <h2>Your practice progress</h2>
+            <p>
+              Track your activity as you work towards your goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="progress-card">
+
+          <div class="progress-illustration">✦</div>
+
+          <div class="progress-copy">
+            <h3>
+              Small steps lead to big achievements.
+            </h3>
+
+            <p id="progressMessage">
+              Complete your first practice session to begin
+              tracking your progress.
+            </p>
+          </div>
+
+          <div class="overall-progress">
+            <strong id="progressPercent">0%</strong>
+            <span>Question completion</span>
+
+            <div class="progress-track">
+              <div
+                class="progress-fill"
+                id="overallProgressFill"
+              ></div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="page-footer">
+        <span>✦ MockMate AI</span>
+        <p>
+          Practice with purpose. Interview with confidence. ♡
+        </p>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>
+
